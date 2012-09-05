@@ -34,7 +34,7 @@ _So... I have to use html to make a table in MD, huh?_
 		<td> Returns Remainder of division </td>
 	</tr>
 	<tr>
-		<td> < </td>
+		<td> &lt; </td>
 		<td> Less-than </td>
 		<td> Compares numbers, Returns True/False </td>
 	</tr>
@@ -44,7 +44,7 @@ _So... I have to use html to make a table in MD, huh?_
 		<td> Compares numbers, Returns True/False </td>
 	</tr>
 	<tr>
-		<td> <= </td>
+		<td> &lt;= </td>
 		<td> Less-than-equal </td>
 		<td> Compares numbers, Returns True/False </td>
 	</tr>
