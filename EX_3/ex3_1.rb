@@ -1,3 +1,5 @@
+# Above each line, use the # to write a comment to yourself explaining what the line does.
+
 puts "I will now count my chickens:"
 
 # This divides 30 by 6 then adds 25 to it yielding 30

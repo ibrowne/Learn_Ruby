@@ -1,3 +1,5 @@
+# Rewrite ex3.rb to use floating point numbers so it's more accurate.
+
 puts "I will now count my chickens:"
 
 puts "Hens", 25.0 + 30.0 / 6.0

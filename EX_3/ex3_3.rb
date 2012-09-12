@@ -1,3 +1,5 @@
+# Find something you need to calculate and write a new .rb file that does it.
+
 puts "How much money per month do I make by selling eggs?"
 
 # 3 bags/mo.
@@ -11,3 +13,5 @@ puts "How much money per month do I make by selling eggs?"
 puts 3 * 15 - (8 * 30 / 12 - 5) * 3
 
 puts "I guess we're doing it for the Kids..."
+
+
