@@ -1,0 +1,123 @@
+@media screen {
+	.data_table caption { margin-right: -1px; }
+}
+
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before,
+.cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+.cf { zoom:1; margin:2em 0; }
+
+h1, h2, h3 { padding: 0px 0px 8px 0px; margin: 0; }
+.bold { font-weight: bold; }
+#header { position: relative; }
+
+#header .document-info {
+	position: absolute;
+	top: 0px;
+	left: 145px;
+}
+
+#header .school-address {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+#student-info {
+	position: relative;
+	height: 1em;
+
+	padding: 20px 0 0 0;
+
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+#student-info div { position: absolute; }
+#student-info .student-grade { left: 320px; }
+#student-info .school-year { right: 0px; }
+
+.data_table { border-collapse: collapse; font-size: 10pt; }
+.data_table caption { padding: 3px; }
+.data_table td, .data_table caption, .data_table th { border: 1px solid gray !important; } 
+.data_table th, .data_table caption {
+	background: rgb(219,229,217) !important;
+	font-size: 11pt;
+	text-align: left;
+}
+
+.grades-table {
+	float: left;
+	width: 615px;
+}
+
+
+
+.attendance-table {
+	float: left;
+	width: 145px;
+	margin-left: -1px;
+}
+
+.data_table caption {
+	border-bottom: none !important;
+}
+
+
+.term_numeric_grade,
+.term_exam_grade,
+.term_grade,
+.credits_earned,
+.total_absences,
+.total_tardies {
+	text-align: center !important;
+	width: 45px;
+}
+
+.term_exam_grade{width:70px;}
+
+.shaded {
+	background: rgb(219,229,217);
+	border: 1px solid gray;
+
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.gpa-footer {
+	float: left;
+	width: 613px;
+
+	border-top: none;
+}
+
+.gpa-footer div { padding: 3px; }
+.gpa-footer .label { float: left; }
+
+.gpa-footer .value {
+	float: right;
+	width: 70px;
+	padding: 3px;
+
+	text-align: center;
+}
+
+
+.comment-section {
+	width: 750px;
+	padding: 3px;
+	margin-top: 2em;
+}
+
+
+ .course-name { width: 50%; }
+.comment .teacher-name { width: 295px; }
+.comment .letter-grade { width: 85px; }
+
+tr.heading td{padding:2px 0 5px 0;}
+
+.comments { font-size: 10pt;  }
+.comment { border-bottom:1px solid #000;padding:2px 0 5px 0; page-break-inside: avoid; }
+.comment p { margin: 3px 0; }
+
+.heading {page-break-after: avoid !important;}

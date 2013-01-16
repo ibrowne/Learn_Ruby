@@ -1,0 +1,49 @@
+<% throw_content :style do %>
+	<%= DataTable.default_css_styles %>
+	<%= partial :css_us %>
+<% end %>
+
+<div id="header">
+	<%= image_tag @general[:logo_url], :width => 100, :height => 100 %>
+	<div class="document-info">
+		<h1 class="school-name"><%= @general[:school_name] %></h1>
+		<h2 class="document-title"><%= @general[:document_title] %></h2>
+		<div class="school-address"><%= @general[:school_address].to_s.gsub("\r\n", ' • ') %> • <%= @general[:school_phone] %> • <%= @general[:school_website] %></div>
+	</div>
+</div>
+
+<div id="student-info">
+	<div class="student-name">Name: <%= @general[:student_first_name] %> <%= @general[:student_last_name] %></div>
+	<div class="student-grade">Grade: <%= @general[:grade_level].to_s.gsub('Grade', '') %></div>
+	<div class="school-year">Year: <%= @general[:school_year_long] %></div>
+</div>
+
+<% @terms.each do |t| %>
+<%= semester_table t %>
+<% end %>
+
+<% @terms.each do |gp| %>
+	<% if gp.to_i <= @grading_period.to_i %>
+		<div class="comment-section shaded">Semester <% if gp == 2 %>1<% elsif gp == 6 %>2<% end %> COMMENTS</div>
+		<div class="comments">
+			<% if @comments.has_key?(gp) %>
+					<% @comments[gp].each do |c| %>
+						<% if not c[:comments].nil? %>
+							<div class="comment">
+								<table>
+									<tr class="heading">
+										<td class="course-name"><span class="bold">Subject:</span> <%= c[:course] %></td>
+										<td class="teacher-name"><span class="bold">Teacher:</span> <%= c[:teacher_name] %></td>
+										<td class="letter-grade"><span class="bold">Grade:</span> <%= c[:term_letter_grade] %></td>
+									</tr>	
+								</table>
+								<p>
+									<%= sanitize_html c[:comments] %>
+								</p>
+							</div>
+						<% end %>
+					<% end %>
+			<% end %>
+		</div>	
+	<% end %>
+<% end %>
