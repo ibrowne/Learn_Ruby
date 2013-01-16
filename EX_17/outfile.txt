@@ -1,0 +1,9 @@
+This is a test of copying text from one file to another...
+
+let's see how it goes...
+
+here we go yeha!
+
+more testing.....
+
+Did i get it down to one line and still have it work?
