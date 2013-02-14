@@ -1,0 +1,6 @@
+This is a test of the ruby script
+I'm not reaaly sure if it's going to work
+But here is a third line,
+and a fourth...
+How many do we need?
+only time will tell...
