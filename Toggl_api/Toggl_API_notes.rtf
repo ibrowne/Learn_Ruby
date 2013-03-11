@@ -1,0 +1,70 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red52\green52\blue52;\red38\green38\blue38;
+\red52\green52\blue52;}
+\margl1440\margr1440\vieww20660\viewh17520\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 TOGGL API token: eb067b1ca045f15f7fb657dba8fb52d3\
+\
+\ul GET TIME ENTRY SAMPLE REQUEST\ulnone :\
+\pard\pardeftab720\sl480
+
+\f1 \cf2 \cb3 curl -v -u 1971800d4d82861d8f2c1651fea4d212:api_token -X GET https://www.toggl.com/api/v6/time_entries/31366.json\
+\
+\ul EXAMPLE GET ENTRIES IN A DATE RANGE REQUEST:\ulnone \
+\
+\pard\pardeftab720\sl480
+
+\f0\b\fs32 \cf4 \cb2 start_date
+\b0  is set to 2010-02-05T15:42:46+02:00 and 
+\b end_date
+\b0  is set to 2010-02-12T15:42:46+02:00\
+\pard\pardeftab720\sl480
+
+\f1\fs24 \cf2 \cb3 curl -v -u 1971800d4d82861d8f2c1651fea4d212:api_token -X GET "https://www.toggl.com/api/v6/time_entries.json?start_date=2010-02-05T15%3A42%3A46%2B02%3A00&end_date=2010-02-12T15%3A42%3A46%2B02%3A00"\
+\cf1 \
+\
+\ul MY SAMPLE:\ulnone \
+TRYING TO GET TIME ENTRIES FOR 3/6/13 ONLY:\
+\
+\pard\pardeftab720\sl480
+\cf1 \cb5 curl -v -u 
+\f0 \cf0 \cb1 eb067b1ca045f15f7fb657dba8fb52d3
+\f1 \cf1 \cb5 :api_token -X GET "https://www.toggl.com/api/v6/time_entries.json?start_date=2013-03-06T01%3A00%3A00%2B02%3A00&end_date=2013-03-07T01%3A00%3A00%2B02%3A00"\
+\
+NOW TRY TO GET A SPESIFIC ENTRY: 65320705\
+\
+curl -v -u 
+\f0 \cf0 \cb1 eb067b1ca045f15f7fb657dba8fb52d3
+\f1 \cf1 \cb5 :api_token -X GET https://www.toggl.com/api/v6/time_entries/65320705.json\
+\
+RETURNED:\
+\{\
+	"data":\
+		\{\
+			"id":65320705,\
+		 	"description":"Admin - VX",\
+			"billable":false,\
+			"start":"2013-03-06T07:28:00-05:00",\
+			"stop":"2013-03-06T08:12:00-05:00",\
+			"duration":2700,\
+			"workspace":\
+				\{\
+					"id":179734,\
+					"name":"Ibrowne's workspace"\
+				\},\
+			"tag_names":[],\
+			"ignore_start_and_stop":true,\
+			"updated_at":"2013-03-06T08:13:00-05:00",\
+			"user_id":240336,\
+			"project":\
+				\{	"id":1424773,\
+					"name":"Admin VX 8450",\
+					"client_project_name":"Admin VX 8450"\
+				\}\
+		\},\
+	"related_data_updated_at":"2013-03-05T00:00:00Z"\
+\}                                            \
+\
+}
